@@ -191,6 +191,7 @@ class Repository(object):
             'c': self.get_commit_id(commit)[0:7],
             'C': self.get_commit_id(commit),
             'e': commit.author.email,
+            'f': "\n".join(commit.stats.files.keys()[:5]),
             'l': self.format_link(commit),
             'm': commit.message.split('\n')[0],
             'n': self.long_name,
